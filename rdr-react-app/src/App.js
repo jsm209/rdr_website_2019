@@ -17,6 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Components
 import MainNavbar from './components/MainNavbar';
+import FooterAudioPlayer from './components/FooterAudioPlayer';
 
 // Screens
 
@@ -59,6 +60,7 @@ function App() {
           </Switch>   
         </div>
       </Router>
+      <FooterAudioPlayer />
     </div>
   );
 }
