@@ -18,7 +18,7 @@ const MainNavbar = (props) => {
     };
 
     return (
-        <div>
+        <div className="fixed-top">
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand href="#home">Rainy Dawg Radio</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -26,7 +26,10 @@ const MainNavbar = (props) => {
                 <Nav className="mr-auto">
                         <Nav.Link><Link to="/" style={style}>Home</Link></Nav.Link>
                         <Nav.Link><Link to="/members" style={style}>Members</Link></Nav.Link>
-                        <Nav.Link><Link to="/schedule" style={style}>Schedule</Link></Nav.Link>
+                        <NavDropdown title="Programming" id="collasible-nav-dropdown">
+                            <NavDropdown.Item><Link to="/shows" style={style}>Shows</Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link to="/schedule" style={style}>Schedule</Link></NavDropdown.Item>
+                        </NavDropdown>
                         <Nav.Link><Link to="/events" style={style}>Events</Link></Nav.Link>
                         <NavDropdown title="More" id="collasible-nav-dropdown">
                             <NavDropdown.Item><Link to="/about" style={style}>About</Link></NavDropdown.Item>

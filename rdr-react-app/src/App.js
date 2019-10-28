@@ -20,6 +20,7 @@ import MainNavbar from './components/MainNavbar';
 import FooterAudioPlayer from './components/FooterAudioPlayer';
 
 // Screens
+import MembersScreen from "./screens/MembersScreen";
 
 function App() {
   return (
@@ -35,7 +36,11 @@ function App() {
             </Route>
             <Route path="/members">
               {/* Members Page */}
-              <p>Members</p>
+              <MembersScreen />
+            </Route>
+            <Route path="/shows">
+              {/* Shows Page */}
+              <p>Shows</p>
             </Route>
             <Route path="/schedule">
               {/* Schedule Page */}
