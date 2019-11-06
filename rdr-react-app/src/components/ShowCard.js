@@ -17,26 +17,56 @@ function ShowCard(props) {
 
   const userLink = "https://spinitron.com/Rainy-Dawg/show/" + props.data.id
 
-  let styles = {
+  let cardstyle = {
     padding: "10px",
-    width: "350px",
+    width: "300px",
     height: "auto",
     color: "black"
   }
 
+  let imgstyle = {
+    height: "150px", 
+    width: "150px", 
+    display: "block",
+    margin: "auto"
+  }
+
+  let buttonstyle = {
+    backgroundColor: 'yellow', 
+    color: 'black'
+  }
+
+  let headerstyle = {
+    backgroundColor: 'yellow',
+    fontSize: '14px', 
+    color: 'black',
+    marginBottom: '20px'
+  }
+
+  let textbox = {
+    height: '120px',
+    width: 'auto',
+    overflow: 'auto',
+    fontSize: '16px', 
+    textAlign: 'left', 
+    paddingTop: '10px'
+  }
 
   // Small issue: some descriptions for shows have <p> </p> surrounding its
   // text. I can't tell if this was an error on spinitron's part, but if not,
   // then later implement a replace to get rid of the <p>'s.'
+
   return (
-    <div style={styles}>
-      <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-        <CardHeader tag="h3">{props.data.title}</CardHeader>
-        <CardImg style={{height: "auto", width: "300px"}} src={props.data.image} alt={props.data.name}/>
+    <div style={cardstyle}>
+      <Card body inverse style={{ backgroundColor: 'black', borderColor: '#333' }}>
+        <CardHeader tag="h3" style={headerstyle}>{props.data.title}</CardHeader>
+        <CardImg style={imgstyle} src={props.data.image} alt={props.data.name}/>
         <CardBody>
           <CardSubtitle style={{fontSize: 12}}>{props.data.url}</CardSubtitle>
-          <CardText style={{fontSize: 16, textAlign: "left", paddingTop: "10px"}}>{props.data.description ? props.data.description : "This show doesn't have a description yet!"}</CardText>
-          <a href={userLink}><Button>More</Button></a>
+          <CardSubtitle style={{fontSize: 12}}>{props.data.category == "unset" ? "Genre N/A" : props.data.category}</CardSubtitle>
+          {/* The monstrosity of a line below checks if description is null and if so, says so. */}
+          <CardText style={textbox}>{props.data.description ? props.data.description.replace('<p>', '').replace('</p>', '') : "This show doesn't have a description yet!"}</CardText>
+          <a href={userLink}><Button style={buttonstyle}>More</Button></a>
         </CardBody>
       </Card>
     </div>

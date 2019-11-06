@@ -17,23 +17,44 @@ function DjCard(props) {
 
   const userLink = "https://spinitron.com/Rainy-Dawg/dj/" + props.data.id
 
-  let styles = {
+  let cardstyle = {
     padding: "10px",
     width: "300px",
     height: "auto",
     color: "black"
   }
 
+  let imgstyle = {
+    height: "150px", 
+    width: "150px", 
+    display: "block",
+    margin: "auto"
+  }
+
+  let buttonstyle = {
+    backgroundColor: 'yellow', 
+    color: 'black'
+  }
+
+  let headerstyle = {
+    backgroundColor: 'yellow', 
+    fontSize: '14px', 
+    color: 'black',
+    marginBottom: '20px'
+  }
+
   return (
-    <div style={styles}>
-      <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-        <CardImg style={{height: "150px", width: "150px", display: "block", margin: "auto"}} src={props.data.image} alt={props.data.name} />
+    <div style={cardstyle}>
+      <Card body inverse style={{ backgroundColor: 'black', borderColor: '#333' }}>
+        <CardHeader tag="h3" style={headerstyle}>{props.data.name}</CardHeader>
+        <CardImg style={imgstyle} src={props.data.image} alt={props.data.name} />
         <CardBody>
-          <CardHeader style={{ backgroundColor: "#444", fontSize: '14px' }}tag="h2">{props.data.name}</CardHeader>
+          {/*<CardHeader style={{ backgroundColor: "#444", fontSize: '14px' }}tag="h2">{props.data.name}</CardHeader>*/}
           {/*<CardSubtitle style={{fontSize: '12px'}}>{props.data.email}</CardSubtitle>*/}
+          {/* The monstrosity of a line below checks if description is null and if so, says so. */}
           {/*<CardText style={{fontSize: 14, textAlign: "left", paddingTop: "10px"}}>{props.data.bio ? props.data.bio : "This DJ didn't make a bio yet!"}</CardText> */}
           <br></br>
-          <a href={userLink}><Button>More</Button></a>
+          <a href={userLink}><Button style={buttonstyle}>More</Button></a>
         </CardBody>
       </Card>
     </div>

@@ -21,6 +21,7 @@ import FooterAudioPlayer from './components/FooterAudioPlayer';
 
 // Screens
 import MembersScreen from "./screens/MembersScreen";
+import ShowsScreen from "./screens/ShowsScreen";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/shows">
               {/* Shows Page */}
               <p>Shows</p>
+              <ShowsScreen />
             </Route>
             <Route path="/schedule">
               {/* Schedule Page */}
