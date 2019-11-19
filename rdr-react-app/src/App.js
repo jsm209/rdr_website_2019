@@ -22,18 +22,24 @@ import FooterAudioPlayer from './components/FooterAudioPlayer';
 // Screens
 import MembersScreen from "./screens/MembersScreen";
 import ShowsScreen from "./screens/ShowsScreen";
+import ScheduleScreen from "./screens/ScheduleScreen";
+import AboutScreen from "./screens/AboutScreen";
+import VolunteerScreen from "./screens/VolunteerScreen";
+import ContactScreen from "./screens/ContactScreen";
+import HomeScreen from "./screens/HomeScreen";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <MainNavbar />
+        <br></br>
         <div>
           {/* Put content for each page between route tags below. */}
           <Switch>
             <Route exact path="/">
               {/* Home Page */}
-              <p>Home</p>
+              <HomeScreen />
             </Route>
             <Route path="/members">
               {/* Members Page */}
@@ -47,22 +53,22 @@ function App() {
             <Route path="/schedule">
               {/* Schedule Page */}
               <p>Schedule</p>
+              <ScheduleScreen />
             </Route>
             <Route path="/events">
               {/* Events Page */}
               <p>Events</p>
             </Route>
             <Route path="/about">
-              {/* About Page */}
-              <p>About</p>
+              <AboutScreen />
             </Route>
             <Route path="/volunteer">
               {/* Volunteer Page */}
-              <p>Volunteer</p>
+              <VolunteerScreen />
             </Route>
             <Route path="/contact">
               {/* Contact Page */}
-              <p>Contact</p>
+              <ContactScreen />
             </Route>
           </Switch>   
         </div>

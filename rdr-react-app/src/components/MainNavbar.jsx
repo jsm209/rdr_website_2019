@@ -34,7 +34,7 @@ const MainNavbar = (props) => {
                         <NavDropdown title="More" id="collasible-nav-dropdown">
                             <NavDropdown.Item><Link to="/about" style={style}>About</Link></NavDropdown.Item>
                             <NavDropdown.Item><Link to="/volunteer" style={style}>Join Our Community</Link></NavDropdown.Item>
-                            <NavDropdown.Item><Link to="/contact" style={style}>Contact</Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link to="/contact" style={style}>Staff And Contact</Link></NavDropdown.Item>
                         </NavDropdown>
                 </Nav>
             </Navbar.Collapse>

@@ -1,22 +1,11 @@
-.App {
-  text-align: center;
+.blogPreviewBox {
+    transition: all .2s ease-in-out;
+    background-color: black;
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+.blogPreviewBox:hover { 
+    transform: scale(1.1);
+    color: black;
+    background-color: yellow;
 }

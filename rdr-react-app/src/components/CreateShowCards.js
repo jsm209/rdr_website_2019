@@ -54,7 +54,6 @@ class CreateShowCards extends React.Component {
       paddingLeft: "10%"
     }
     let cards = this.state.data.map( (item) => {
-      console.log(item);
       return <ShowCard data={item}/>
     })
 
