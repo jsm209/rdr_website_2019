@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { Container, Row, Col } from 'reactstrap';
+import ScheduleCarousel from '../components/ScheduleCarousel';
+import CreateSchedule from '../components/CreateSchedule';
 
 class ScheduleScreen extends React.Component {
 
@@ -57,9 +59,14 @@ class ScheduleScreen extends React.Component {
 			<div>
                 {/* Each row is a time, each column is a day 
                     So Y-Axis is time and X-axis is day */}
+                {/*
+                <h1 style={{paddingTop: '6%'}}>Schedule</h1>
 				<Container>
                     {schedule}
                 </Container>
+                */}
+                <CreateSchedule />
+
 			</div>
 		)
 	}

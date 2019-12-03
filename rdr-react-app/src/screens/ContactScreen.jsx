@@ -21,7 +21,7 @@ class ContactScreen extends React.Component {
 
 		return(
 			<div style={style}>
-				<h1>Contact</h1>
+				<h1 style={{paddingTop: '6%'}}>Contact</h1>
                 <h2>Reach out to any of our staff below for related needs!</h2>
                 <Row>
                     <Col className="col-6">
