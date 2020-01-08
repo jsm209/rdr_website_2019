@@ -18,6 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Components
 import MainNavbar from './components/MainNavbar';
 import FooterAudioPlayer from './components/FooterAudioPlayer';
+import Banner from './components/Banner';
 
 // Screens
 import MembersScreen from "./screens/MembersScreen";
@@ -27,13 +28,29 @@ import AboutScreen from "./screens/AboutScreen";
 import VolunteerScreen from "./screens/VolunteerScreen";
 import ContactScreen from "./screens/ContactScreen";
 import HomeScreen from "./screens/HomeScreen";
+import StreamScreen from "./screens/StreamScreen";
 
 function App() {
+
+  let globalStyle = {
+    fontFamily: "Roboto Condensed, sans-serif"
+    /*
+
+    // Background stuff
+    backgroundImage: "url(" + Background + ")",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    backgroundPosition: "center" 
+    */
+  }
+
   return (
-    <div className="App">
+    <div className="App" style={globalStyle}>
       <Router>
         <MainNavbar />
-        <br></br>
+        {/*<Banner className="hidden-xs"/>*/}
+        <br />
         <div>
           {/* Put content for each page between route tags below. */}
           <Switch>
@@ -69,6 +86,10 @@ function App() {
             <Route path="/contact">
               {/* Contact Page */}
               <ContactScreen />
+            </Route>
+            <Route path="/stream">
+              {/* Stream Page */}
+              <StreamScreen />
             </Route>
           </Switch>   
         </div>

@@ -1,11 +1,38 @@
-.blogPreviewBox {
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+.app {
+    font-family: "Roboto Condensed, sans-serif";
+    /*
+    background-image:url('./images/rdr-bg.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    */
+}
+
+.blogPreviewBox, .djPreview, .showPreviewBox {
     transition: all .2s ease-in-out;
     background-color: black;
     color: white;
 }
 
-.blogPreviewBox:hover { 
+.blogPreviewBox:hover, .djPreview:hover { 
     transform: scale(1.1);
     color: black;
     background-color: yellow;
+}
+
+.showPreviewBox:hover { 
+    transform: scale(1.1);
+}
+
+h1 {
+    padding-top: "6%";
+    padding-left: "10%";
+}
+
+@media (max-width: 550px) {
+    .scheduleColumnOther {
+        display: none;
+    }
 }

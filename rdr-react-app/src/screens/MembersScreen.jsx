@@ -6,7 +6,7 @@ class MembersScreen extends React.Component {
 	render() {
 		return(
 			<div>
-				<h1 style={{paddingTop: '6%'}}>Members</h1>
+				<h1 style={{paddingTop: '7%', paddingLeft: '4%'}}>Members</h1>
                 <CreateDjCards />
 			</div>
 		)

@@ -11,6 +11,9 @@ class VolunteerScreen extends React.Component {
 		return(
 			<div style={style}>
 				<h1>Join Our Community!</h1>
+
+                <p>Volunteer by filling out our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdjBKW7zQ_vlslJLRvNziBuoUmPrNXu4M7TCr_mcdTL9-wew/viewform?usp=sf_link" target="_blank">application</a>.</p>
+
                 <h2>DJs, Bloggers, and More!</h2>
                 <p>At the beginning of every quarter, we look to add more volunteers to our roster!
                 We're interested in students who have passion and diversity in music and want to find

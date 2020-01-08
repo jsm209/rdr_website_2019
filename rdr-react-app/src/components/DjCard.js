@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardSubtitle, Button, CardHeader } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 // Given props with:
 // data.name - name of DJ
@@ -13,15 +14,25 @@ import { Card, CardImg, CardText, CardBody,
 // Will return a ReactStrap card with the given information.
 // props.data is assumed to be the individual JSON objects returned by
 // requesting the endpoint "personas" from the Spinitron V2 API.
-function DjCard(props) {
+
+const DjCard = (props) => {
+  
+  const {
+    buttonLabel,
+    className
+  } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
 
   const userLink = "https://spinitron.com/Rainy-Dawg/dj/" + props.data.id
 
   let cardstyle = {
-    padding: "10px",
-    width: "300px",
+    width: "150px",
     height: "auto",
-    color: "black"
+    color: "black",
+    margin: "5px"
   }
 
   let imgstyle = {
@@ -44,21 +55,41 @@ function DjCard(props) {
   }
 
   return (
+    <div className='djPreview' style={cardstyle}>
+      <img style={imgstyle} src={props.data.image} alt={props.data.name} onClick={toggle}/>
+
+      <Modal isOpen={modal} toggle={toggle} className={className}>
+        <ModalHeader toggle={toggle}>{props.data.name}</ModalHeader>
+        <ModalBody>
+          <p>{props.data.bio ? props.data.bio.replace("<p>", "").replace("</p>", "") : "This DJ didn't make a bio yet!"}</p>
+          <p>{props.data.email}</p>
+        </ModalBody>
+        <ModalFooter>
+          <a href={userLink} target="_blank"><Button color="primary" onClick={toggle}>Shows</Button>{' '}</a>
+          <Button color="secondary" onClick={toggle}>Close</Button>
+        </ModalFooter>
+      </Modal>
+    </div>
+  );
+}
+
+export default DjCard;
+
+
+
+
+
+
+/*
     <div style={cardstyle}>
       <Card body inverse style={{ backgroundColor: 'black', borderColor: '#333' }}>
         <CardHeader tag="h3" style={headerstyle}>{props.data.name}</CardHeader>
         <CardImg style={imgstyle} src={props.data.image} alt={props.data.name} />
         <CardBody>
-          {/*<CardHeader style={{ backgroundColor: "#444", fontSize: '14px' }}tag="h2">{props.data.name}</CardHeader>*/}
-          {/*<CardSubtitle style={{fontSize: '12px'}}>{props.data.email}</CardSubtitle>*/}
-          {/* The monstrosity of a line below checks if description is null and if so, says so. */}
-          {/*<CardText style={{fontSize: 14, textAlign: "left", paddingTop: "10px"}}>{props.data.bio ? props.data.bio : "This DJ didn't make a bio yet!"}</CardText> */}
+
           <br></br>
           <a href={userLink}><Button style={buttonstyle}>More</Button></a>
         </CardBody>
       </Card>
     </div>
-  );
-};
-
-export default DjCard;
+*/

@@ -42,7 +42,9 @@ class CreateBlogPosts extends React.Component {
     let styles = {
       display: "flex",
       flexWrap: "wrap",
-      margin: "auto"
+      margin: "auto",
+      width: "90%",
+      justifyContent: "space-evenly"
     }
 
     return(

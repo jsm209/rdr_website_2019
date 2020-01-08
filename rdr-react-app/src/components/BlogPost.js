@@ -43,7 +43,12 @@ function BlogPost(props) {
   return (
     
     <div className='blogPreviewBox' style={boxStyle} onClick={toggle}>
-      <p style={titleStyle}>{props.post.title}</p>
+      <p style={titleStyle}>
+        {props.post.title} 
+        <br /> 
+        <span style={{fontWeight:"bold"}}>({props.post.date.slice(0, 10)})</span>
+      </p>
+      {console.log(props)}
 
       <Modal isOpen={modal} toggle={toggle} className={className} size="lg">
         <ModalHeader toggle={toggle}>{props.post.title}</ModalHeader>

@@ -51,7 +51,8 @@ class CreateDjCards extends React.Component {
       display: "flex",
       flexWrap: "wrap",
       margin: "auto",
-      paddingLeft: "10%"
+      width: "90%",
+      justifyContent: "space-evenly"
     }
     let cards = this.state.data.map( (item) => {
       return <DjCard data={item}/>
