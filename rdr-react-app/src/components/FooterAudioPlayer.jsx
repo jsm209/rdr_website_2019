@@ -72,7 +72,7 @@ class FooterAudioPlayer extends React.Component{
                     <i className="fa fa-play-circle" style={{fontSize: '30px'}} onClick={this.onPlay}></i>
                     <p style={pStyle}>{this.state.isLoading ? "Now Playing" : "Click Play To Stream"}</p>
                     <p style={pStyle}>{this.state.isLoading ? this.state.data.artist + "-" + this.state.data.song : ""}</p>
-                    <p style={pStyle}>{this.state.isLoading ? "(" + this.state.data.start + ")" : ""}</p>
+                    {/*<p style={pStyle}>{this.state.isLoading ? "(" + this.state.data.start + ")" : ""}</p>*/}
                 </Navbar>
             </div>
         )

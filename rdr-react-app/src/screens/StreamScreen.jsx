@@ -35,12 +35,12 @@ class StreamScreen extends React.Component {
                 <div style={flexboxStyle}>
                     <div>
                         <h2>Current Show</h2>
-                        <iframe src="//widgets.spinitron.com/widget/current-playlist?station=/Rainy-Dawg-Radio" allow="encrypted-media" frameborder="0" scrolling="yes" height="600px" margin="auto"></iframe>
+                        <iframe src="https://spinitron.com/widget/current-playlist?station=rainy%20dawg" allow="encrypted-media" frameborder="0" scrolling="yes" height="600px" margin="auto"></iframe>
                     </div>
 
                     <div>
                         <h2>Most Recent Spins</h2>
-                        <iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=/Rainy Dawg&num=5&sharing=1&cover=1&player=1&merch=1" allow="encrypted-media" frameborder="0" scrolling="no" height="600px" margin="auto"></iframe>
+                        <iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=rainy%20dawg&num=5&sharing=1&cover=1&player=1&merch=1" allow="encrypted-media" frameborder="0" scrolling="no" height="600px" margin="auto"></iframe>
                     </div>
                 </div>
 
