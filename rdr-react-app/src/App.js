@@ -29,6 +29,7 @@ import VolunteerScreen from "./screens/VolunteerScreen";
 import ContactScreen from "./screens/ContactScreen";
 import HomeScreen from "./screens/HomeScreen";
 import StreamScreen from "./screens/StreamScreen";
+import RecordingsScreen from "./screens/RecordingsScreen";
 
 function App() {
 
@@ -90,6 +91,10 @@ function App() {
             <Route path="/stream">
               {/* Stream Page */}
               <StreamScreen />
+            </Route>
+            <Route path="/recordings">
+              {/* Recordings Page */}
+              <RecordingsScreen />
             </Route>
           </Switch>   
         </div>

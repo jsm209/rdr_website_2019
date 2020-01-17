@@ -48,6 +48,15 @@ class ScheduleScreen extends React.Component {
         }
         */
 
+
+        let iframeStyle = {
+            width: "100%", 
+            height: "3000px", 
+            width: "100%",
+            frameborder: "0",
+            scrolling: "auto"
+        }
+
 		return(
 			<div>
                 {/* Each row is a time, each column is a day 
@@ -58,7 +67,9 @@ class ScheduleScreen extends React.Component {
                     {schedule}
                 </Container>
                 */}
-                <CreateSchedule />
+                {/*<CreateSchedule />*/}
+                {/* holy shit i just made an entire system only to replace it with this iframe wtfffff*/}
+                <iframe loading="lazy" className="lazyloaded" src="https://spinitron.com/Rainy-Dawg/calendar/?bodyclass=simple" style={iframeStyle} onload="scro11me(this)" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://spinitron.com/Rainy-Dawg/calendar/?bodyclass=simple" data-was-processed="true"></iframe>
 
 			</div>
 		)

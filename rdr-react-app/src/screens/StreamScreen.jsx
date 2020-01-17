@@ -30,6 +30,8 @@ class StreamScreen extends React.Component {
                     <p>You can stream our music by clicking the play button at the bottom left of the screen!</p>
                     <p>Find Rainy Dawg Radio on the first floor of the HUB in room 131N or by 
                     calling (206) 685-0890 !</p>
+                    <p> If you have any questions about the studio and its equipment, or there are problems with the online stream,
+                    send an email to our technology manager at <a href = "mailto: asuwrdtm@uw.edu">asuwrdtm@uw.edu</a>.</p>
                 </section>
 
                 <div style={flexboxStyle}>
