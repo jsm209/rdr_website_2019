@@ -1,6 +1,7 @@
 
 
 import React, { useState } from 'react';
+import he from 'he';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
@@ -25,14 +26,14 @@ function BlogPost(props) {
   const toggle = () => setModal(!modal);
   // Styles  
   let boxStyle = {
-    width: "180px",
+    width: "300px",
     height: "180px",
     margin: "10px",
     border: "1px solid white"
   };
 
   let titleStyle = {
-    width: "120px",
+    width: "250px",
     marginLeft: "auto",
     marginRight: "auto",
     position: "relative",
@@ -40,14 +41,22 @@ function BlogPost(props) {
     transform: "translateY(-50%)"
   };
 
+  let strippedBody = props.post.body.replace(/<[^>]+>/g, '');
+  strippedBody = strippedBody.slice(0,100);
+  strippedBody = he.decode(strippedBody);
+  strippedBody = strippedBody + "... (see more)"
+
+
+
   return (
-    
     <div className='blogPreviewBox' style={boxStyle} onClick={toggle}>
-      <p style={titleStyle}>
-        {props.post.title} 
-        <br /> 
+      <div style={titleStyle}>
+        <p style={{fontWeight:"bold"}}>{props.post.title} </p>
+        {strippedBody}
+        <br />
         <span style={{fontWeight:"bold"}}>({props.post.date.slice(0, 10)})</span>
-      </p>
+      </div>
+      {console.log(props.post)}
       {console.log(props)}
 
       <Modal isOpen={modal} toggle={toggle} className={className} size="lg">

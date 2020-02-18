@@ -17,9 +17,16 @@ const MainNavbar = (props) => {
         color: "inherit" // Removes link coloring, uses bootstrap style.
     };
 
+    let bannerStyle = {
+        backgroundImage:"url('./images/rdr-banner-dark.png')",
+        backgroundRepeat: "repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+    }
+
     return (
         <div className="fixed-top">
-            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="dark" style={bannerStyle}>
             <Navbar.Brand><Link to="/" style={style}>Rainy Dawg Radio</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

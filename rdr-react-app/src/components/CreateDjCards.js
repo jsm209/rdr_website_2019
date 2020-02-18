@@ -27,7 +27,8 @@ class CreateDjCards extends React.Component {
   // Will make a call to the Spinitron v2 API for 1 page of JSON data about
   // DJ profiles.
   getData(url, pageNumber) {
-    return new Promise((resolve, reject) => fetch(url + "&page=" + pageNumber)
+    let proxyurl = "https://cors-anywhere.herokuapp.com/";
+    return new Promise((resolve, reject) => fetch(proxyurl + url + "&page=" + pageNumber)
       .then(response => {
         response.json().then(data => {
           this.setState((prevState) => {

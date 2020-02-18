@@ -42,14 +42,13 @@ class CreateBlogPosts extends React.Component {
     let styles = {
       display: "flex",
       flexWrap: "wrap",
-      margin: "auto",
-      width: "90%",
+      width: "350px",
       justifyContent: "space-evenly"
     }
 
     return(
       <div style={styles}>
-        {posts}
+        {posts.slice(0, 4)}
       </div>
     );
   }
