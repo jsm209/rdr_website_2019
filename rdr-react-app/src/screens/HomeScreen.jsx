@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CreateBlogPosts from '../components/CreateBlogPosts';
+import { Timeline } from 'react-twitter-widgets'
 
 class HomeScreen extends React.Component {
 
@@ -11,20 +12,54 @@ class HomeScreen extends React.Component {
 
 
 	render() {
+		let title = {
+			fontSize: "60px",
+			fontFamily: "Gaegu",
+			textAlign: "center",
+			paddingTop: "7%"
+		}
+
 		let blogPostContainerStyle = {
-			float: "right"
+			paddingTop: "30px"
 		}
 
 		let blogPostContainerLable = {
-			fontSize: "22px"
+			fontSize: "26px",
+			fontFamily: "Gaegu",
+			textAlign: "left",
+			paddingLeft: "5%"
+		}
+
+		let screenFlexboxStyle = {
+			display: "flex"
 		}
 	
 		return(
 			<div>
-				<h1 style={{paddingTop: '7%', paddingLeft: '4%'}}>Home</h1>
+				<h1 style={title}></h1>
 				<div style={blogPostContainerStyle}>
-					<p style={blogPostContainerLable}>Most Recent Blog Posts</p>
-					<CreateBlogPosts />
+					<div style={screenFlexboxStyle}>
+						<div>
+							<p style={blogPostContainerLable}>Most Recent Blog Posts</p>
+							<CreateBlogPosts />
+						</div>
+						<div>
+							<Timeline
+								dataSource={{
+								sourceType: 'profile',
+								screenName: 'RainyDawgRadio'
+								}}
+								options={{
+								username: 'RainyDawgRadio',
+								height: '400',
+								width: '200px'
+								}}
+								onLoad={() => console.log('Timeline is loaded!')}
+							/>
+						</div>
+					</div>
+
+
 				</div>
 				
 			</div>

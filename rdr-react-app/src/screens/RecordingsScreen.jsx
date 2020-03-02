@@ -4,15 +4,31 @@ class RecordingsScreen extends React.Component {
 	render() {
 
         let style = {
-            textAlign: "left",
-            padding: "8% 10%"
+            padding: "8% 10%",
+            fontFamily: "Gaegu",
+            textAlign: "left"
+        }
+
+        let h1Style = {
+            fontWeight: "bold"
+        }
+
+        let pStyle = {
+            fontSize: "18px"
+        }
+
+        let imageStyle = {
+            width: "20%",
+            height: "auto",
+            float: "right"
         }
 
 		return(
 			<div style={style}>
-				<h1>Studio Recordings</h1>
+				<h1 style={h1Style}>Studio Recordings</h1>
                 <h2><a href="https://drive.google.com/open?id=1yH__qFQq-LalBPwxsUGW5uHb5AwQaO0U" target="_blank">Click here for the Google Drive of studio recordings</a></h2>
-                <p>Volunteer DJs have the ability to record their shows live in the studio 
+                <img style={imageStyle} src='./images/icon-squirrel.png'/>
+                <p style={pStyle}>Volunteer DJs have the ability to record their shows live in the studio 
                     as they're broadcasting. You can view them by clicking <a href="https://drive.google.com/open?id=1yH__qFQq-LalBPwxsUGW5uHb5AwQaO0U" target="_blank">here</a> or the link 
                     above. Keep in mind that each recording takes at most a few hours to be
                     uploaded online, so check back later if you can't find your recording.
