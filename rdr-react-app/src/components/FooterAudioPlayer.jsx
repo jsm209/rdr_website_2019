@@ -25,8 +25,12 @@ class FooterAudioPlayer extends React.Component{
         let waitTime = 10000; // the time in ms to wait before getting the most recent song again.
 
         // Calls it initially, then sets an interval for it.
-        this.getData("https://spinitron.com/api/spins?access-token=VIT_hdbWICcgF3nGwvcLJCf6");
-        this.interval = setInterval(() => this.getData("https://spinitron.com/api/spins?access-token=VIT_hdbWICcgF3nGwvcLJCf6"), waitTime);
+
+        // former spinitron url: https://spinitron.com/api/spins?access-token=VIT_hdbWICcgF3nGwvcLJCf6
+        // andrew's backend url: http://rdr-backend.herokuapp.com/getSpinitronSpins
+
+        this.getData("http://rdr-backend.herokuapp.com/getSpinitronSpins");
+        this.interval = setInterval(() => this.getData("http://rdr-backend.herokuapp.com/getSpinitronSpins"), waitTime);
         
     }
 
