@@ -32,15 +32,32 @@ const DjCard = (props) => {
     width: "150px",
     height: "auto",
     color: "black",
-    margin: "5px"
+    margin: "5px",
+    zIndex: "2"
   }
 
   let imgstyle = {
     height: "150px", 
     width: "150px", 
     display: "block",
-    margin: "auto"
+    margin: "auto",
+    filter: "brightness(75%)"
   }
+
+  let imgstyleModal = {
+    width: "200px",
+    height: "auto"
+  }
+
+  let titleStyle = {
+    width: "190px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    position: "relative",
+    top: "-50%",
+    fontWeight:"bold", 
+    color: "white"
+  };
 
   let buttonstyle = {
     backgroundColor: 'yellow', 
@@ -55,12 +72,15 @@ const DjCard = (props) => {
   }
 
   return (
-    <div className='djPreview' style={cardstyle}>
-      <img style={imgstyle} src={props.data.image} alt={props.data.name} onClick={toggle}/>
-
+    <div style={cardstyle}>
+      <img style={imgstyle} src={props.data.image} alt={props.data.name} onClick={toggle} className='djPreview'/>
+      <div style={titleStyle}>
+        <span>{props.data.name} </span>
+      </div>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>{props.data.name}</ModalHeader>
         <ModalBody>
+          <img style={imgstyleModal} src={props.data.image} alt={props.data.name}/>
           <p>{props.data.bio ? props.data.bio.replace("<p>", "").replace("</p>", "") : "This DJ didn't make a bio yet!"}</p>
           <p>{props.data.email}</p>
         </ModalBody>

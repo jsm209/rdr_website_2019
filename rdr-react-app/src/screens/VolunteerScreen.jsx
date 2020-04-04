@@ -5,7 +5,8 @@ class VolunteerScreen extends React.Component {
 
         let style = {
             padding: "8% 10%",
-            fontFamily: "Gaegu",
+            //fontFamily: "Gaegu",
+            color: "black",
             textAlign: "left"
         }
 
@@ -35,8 +36,8 @@ class VolunteerScreen extends React.Component {
 
 		return(
 			<div style={style}>
-                <img style={imageStyle} src='./images/event-bg1.png'/>
-                <div style={rectStyle}>
+                <img style={imageStyle} src='./images/event-bg1.png' className='hideOnMobile'/>
+                <div className="offsetContentRectStyle">
                     <h1 style={h1Style}>Join Our Community!</h1>
 
                     <p style={pStyle}>Volunteer by filling out our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdjBKW7zQ_vlslJLRvNziBuoUmPrNXu4M7TCr_mcdTL9-wew/viewform?usp=sf_link" target="_blank">application</a>.</p>
@@ -60,10 +61,9 @@ class VolunteerScreen extends React.Component {
                     and promote local acts.</p>
 
                     <h3>Music Specialist</h3>
-                    <p style={pStyle}>As a blogger, you'll have the opportunity to practice journalism and writing about 
-                    local music in Seattle through attending events and listening to music. Rainy Dawg Radio
-                    ocasionally supplies bloggers with free tickets to local shows to fuel blogging content
-                    and promote local acts.</p>
+                    <p style={pStyle}>As a music specialist you'll aid our director of music by being passionate about
+                    the music genres you love! By keeping up to date in your specialty genre and making suggestions to
+                    the music director, you can influence the music rotation at Rainy Dawg Radio.</p>
 
                     <p style={pStyle}>Find Rainy Dawg Radio on the first floor of the HUB in room 131N or by 
                     calling (206) 685-0890 !</p>

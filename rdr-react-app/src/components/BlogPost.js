@@ -29,7 +29,8 @@ function BlogPost(props) {
     width: "300px",
     height: "180px",
     margin: "10px",
-    border: "1px solid white"
+    border: "1px solid white",
+    zIndex: 2
   };
 
   let titleStyle = {
@@ -46,7 +47,10 @@ function BlogPost(props) {
   strippedBody = he.decode(strippedBody);
   strippedBody = strippedBody + "... (see more)"
 
-
+  // Converting dates like 2020-03-04 to March 4 2020
+  let allMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let month = allMonths[Number(props.post.date.slice(5, 7)) - 1];
+  let totalDate = Number(props.post.date.slice(8, 10)) + " " + month + " " + props.post.date.slice(0, 4);
 
   return (
     <div className='blogPreviewBox' style={boxStyle} onClick={toggle}>
@@ -54,7 +58,7 @@ function BlogPost(props) {
         <p style={{fontWeight:"bold"}}>{props.post.title} </p>
         {strippedBody}
         <br />
-        <span style={{fontWeight:"bold"}}>({props.post.date.slice(0, 10)})</span>
+        <span style={{fontWeight:"bold"}}>({totalDate})</span>
       </div>
       {console.log(props.post)}
       {console.log(props)}

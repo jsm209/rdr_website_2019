@@ -10,20 +10,42 @@
     */
 }
 
-.blogPreviewBox, .djPreview, .showPreviewBox {
+.blogPreviewBox, .showPreviewBox {
     transition: all .2s ease-in-out;
     background-color: black;
     color: white;
 }
 
-.blogPreviewBox:hover, .djPreview:hover { 
+.blogPreviewBox:hover { 
     transform: scale(1.1);
     color: black;
     background-color: yellow;
 }
 
+.djPreview {
+    transition: all .2s ease-in-out;
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+}
+
+.djPreview:hover { 
+    transform: scale(1.1);
+    color: black;
+    background-color: yellow;
+    opacity: 1.0;
+}
+
 .showPreviewBox:hover { 
     transform: scale(1.1);
+}
+
+.offsetContentRectStyle {
+    background-color: #FFF04C;
+    width: 60%;
+    padding: 5%;
+    padding-right: 20%;
+    height: 100%;
 }
 
 h1 {
@@ -34,5 +56,18 @@ h1 {
 @media (max-width: 550px) {
     .scheduleColumnOther {
         display: none;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .showOnlyOnMobile {
+        display: "block";
+    }
+
+    .offsetContentRectStyle {
+        width: 100%;
+        padding-right: 0%;
     }
 }

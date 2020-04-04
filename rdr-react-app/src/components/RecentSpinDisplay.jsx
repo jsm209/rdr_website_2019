@@ -56,9 +56,9 @@ class RecentSpinDisplay extends React.Component{
 
         return(
           <div>
-            <p>Recent Spin:</p>
-            <p style={pStyle}>San Holo - Honest</p>
-            <p style={pStyle}>time date here</p>
+            <h2>On Air:</h2>
+            <p style={pStyle}>Show Name - With Show Host A and B</p>
+            <p style={pStyle}>Show Description</p>
           </div>
         )
     }

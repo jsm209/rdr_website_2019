@@ -54,7 +54,8 @@ class ScheduleScreen extends React.Component {
             height: "3000px", 
             width: "100%",
             frameborder: "0",
-            scrolling: "auto"
+            scrolling: "auto",
+            backgroundColor: "white"
         }
 
 		return(

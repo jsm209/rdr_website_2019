@@ -41,8 +41,7 @@ class FooterAudioPlayer extends React.Component{
 
     // Will make a call to the Spinitron v2 API
     getData = (url) => {
-        let proxyurl = "https://cors-anywhere.herokuapp.com/";
-        return new Promise((resolve, reject) => fetch(proxyurl + url)      
+        return new Promise((resolve, reject) => fetch(url)      
           .then(response => {
             response.json().then(data => {
               console.log(data);
@@ -70,6 +69,12 @@ class FooterAudioPlayer extends React.Component{
         }
 
         return(
+          <div className="fixed-bottom">  
+            <Navbar style={this.NavbarStyle}>
+                <p style={pStyle}>{this.state.isLoading ? "Now Playing" : "Stream is temporarily disabled due to COVID-19"}</p>
+            </Navbar>
+          </div>
+          /*
             <div className="fixed-bottom">  
                 <Navbar style={this.NavbarStyle}>
                     <i className="fa fa-play-circle" style={{fontSize: '30px'}} onClick={this.onPlay}></i>
@@ -78,6 +83,7 @@ class FooterAudioPlayer extends React.Component{
                     <p style={pStyle}>{this.state.isLoading ? "(" + this.tConvert(this.state.data.start.substring(11, 16)) + ")" : ""}</p>
                 </Navbar>
             </div>
+          */
         )
     }
 

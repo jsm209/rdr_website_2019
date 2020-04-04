@@ -3,10 +3,28 @@ import React from 'react';
 class RecordingsScreen extends React.Component {
 	render() {
 
+
+        let headerSectionStyle = {
+            backgroundColor: "#FFF04C",
+            margin: "auto",
+            width: "80%",
+            padding: "5%",
+            height: "100%",
+            marginBottom: "20px"
+        }
+
         let style = {
             padding: "8% 10%",
-            fontFamily: "Gaegu",
-            textAlign: "left"
+            //fontFamily: "Gaegu",
+            color: "black",
+            textAlign: "left",
+            backgroundColor: "#FFF04C",
+            margin: "auto",
+            width: "80%",
+            padding: "5%",
+            height: "100%",
+            marginTop: "50px",
+            paddingBottom: "200px"
         }
 
         let h1Style = {
@@ -26,7 +44,8 @@ class RecordingsScreen extends React.Component {
 		return(
 			<div style={style}>
 				<h1 style={h1Style}>Studio Recordings</h1>
-                <h2><a href="https://drive.google.com/open?id=1yH__qFQq-LalBPwxsUGW5uHb5AwQaO0U" target="_blank">Click here for the Google Drive of studio recordings</a></h2>
+                <h2><a href="https://drive.google.com/open?id=1yH__qFQq-LalBPwxsUGW5uHb5AwQaO0U" target="_blank">Click here for the Google Drive of studio recordings *</a></h2>
+                <i style={pStyle}>* Must use a UW gmail address to access recordings</i>
                 <img style={imageStyle} src='./images/icon-squirrel.png'/>
                 <p style={pStyle}>Volunteer DJs have the ability to record their shows live in the studio 
                     as they're broadcasting. You can view them by clicking <a href="https://drive.google.com/open?id=1yH__qFQq-LalBPwxsUGW5uHb5AwQaO0U" target="_blank">here</a> or the link 

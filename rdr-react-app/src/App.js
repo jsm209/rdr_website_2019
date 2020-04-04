@@ -35,7 +35,9 @@ import RecordingsScreen from "./screens/RecordingsScreen";
 function App() {
 
   let globalStyle = {
-    fontFamily: "Roboto Condensed, sans-serif"
+    fontFamily: "Roboto Condensed, sans-serif",
+    backgroundColor: "#090909",
+    color: "white"
     /*
 
     // Background stuff

@@ -5,16 +5,9 @@ class AboutScreen extends React.Component {
 
         let style = {
             padding: "8% 10%",
-            fontFamily: "Gaegu",
+            //fontFamily: "Gaegu",
+            color: "black",
             textAlign: "left"
-        }
-
-        let rectStyle = {
-            backgroundColor: "#FFF04C",
-            width: "60%",
-            padding: "5%",
-            paddingRight: "20%",
-            height: "100%"
         }
 
         let h1Style = {
@@ -33,11 +26,18 @@ class AboutScreen extends React.Component {
             top: '33%'
         }
 
+        let imageStyleMobile = {
+            height: "175px",
+            width: "auto",
+            display: "none"
+        }
+
 		return(
 			<div style={style}>
-                <img style={imageStyle} src='./images/staff-all.jpg'/>
-                <div style={rectStyle}>
+                <img style={imageStyle} src='./images/staff-all.jpg' className='hideOnMobile'/>
+                <div className="offsetContentRectStyle">
                     <h1 style={h1Style}>What is Rainy Dawg Radio?</h1>
+                    <img style={imageStyleMobile} src='./images/staff-all.jpg' className='showOnlyOnMobile'/>
                     <h2>A student-powered radio station at the University of Washington</h2>
                     <p style={pStyle}>Rainy Dawg Radio is a non-profit radio station staffed and operated 
                     by students at the University of Washington. Though the station focuses
