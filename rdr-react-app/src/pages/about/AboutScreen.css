@@ -1,0 +1,19 @@
+.about-pg {
+    padding: 8% 10%;
+    color: black;
+    text-align: left;
+}
+
+.about-pg h1 {
+    font-weight: bold;
+}
+
+.about-pg p {
+    font-size: 18px;
+}
+
+.about-pg img {
+    height: 175px;
+    width: auto;
+    display: none;
+}

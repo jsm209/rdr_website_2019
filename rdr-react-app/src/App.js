@@ -1,9 +1,7 @@
 
 // Default
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import './fonts.css';
 
 // React Router
 import {
@@ -20,37 +18,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MainNavbar from './components/MainNavbar';
 import FooterAudioPlayer from './components/FooterAudioPlayer';
 import Banner from './components/Banner';
+import { Footer } from './components/Footer/Footer';
 
 // Screens
-import MembersScreen from "./screens/MembersScreen";
-import ShowsScreen from "./screens/ShowsScreen";
-import ScheduleScreen from "./screens/ScheduleScreen";
-import AboutScreen from "./screens/AboutScreen";
-import VolunteerScreen from "./screens/VolunteerScreen";
-import ContactScreen from "./screens/ContactScreen";
-import HomeScreen from "./screens/HomeScreen";
-import StreamScreen from "./screens/StreamScreen";
-import RecordingsScreen from "./screens/RecordingsScreen";
+import MembersScreen from "./pages/current-djs/MembersScreen";
+import ShowsScreen from "./pages/shows/ShowsScreen"
+import ScheduleScreen from "./pages/schedule/ScheduleScreen"
+import AboutScreen from "./pages/about/AboutScreen";
+import VolunteerScreen from "./pages/get-involved/VolunteerScreen";
+import ContactScreen from "./pages/staff-contact/ContactScreen";
+import HomeScreen from "./pages/home/HomeScreen";
+import StreamScreen from "./pages/stream/StreamScreen";
+import RecordingsScreen from "./pages/recordings/RecordingsScreen";
 
 function App() {
 
-  let globalStyle = {
-    fontFamily: "Roboto Condensed, sans-serif",
-    backgroundColor: "#090909",
-    color: "white"
-    /*
-
-    // Background stuff
-    backgroundImage: "url(" + Background + ")",
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
-    backgroundSize: "cover",
-    backgroundPosition: "center" 
-    */
-  }
-
   return (
-    <div className="App" style={globalStyle}>
+    <div className="app">
       <Router>
         <MainNavbar />
         {/*<Banner className="hidden-xs"/>*/}
@@ -59,49 +43,41 @@ function App() {
           {/* Put content for each page between route tags below. */}
           <Switch>
             <Route exact path="/">
-              {/* Home Page */}
               <HomeScreen />
             </Route>
             <Route path="/members">
-              {/* Members Page */}
               <MembersScreen />
             </Route>
             <Route path="/shows">
-              {/* Shows Page */}
               <p>Shows</p>
               <ShowsScreen />
             </Route>
             <Route path="/schedule">
-              {/* Schedule Page */}
               <p>Schedule</p>
               <ScheduleScreen />
             </Route>
             <Route path="/events">
-              {/* Events Page */}
               <p>Events</p>
             </Route>
             <Route path="/about">
               <AboutScreen />
             </Route>
             <Route path="/volunteer">
-              {/* Volunteer Page */}
               <VolunteerScreen />
             </Route>
             <Route path="/contact">
-              {/* Contact Page */}
               <ContactScreen />
             </Route>
             <Route path="/stream">
-              {/* Stream Page */}
               <StreamScreen />
             </Route>
             <Route path="/recordings">
-              {/* Recordings Page */}
               <RecordingsScreen />
             </Route>
           </Switch>   
         </div>
       </Router>
+      <Footer />
       <FooterAudioPlayer />
     </div>
   );

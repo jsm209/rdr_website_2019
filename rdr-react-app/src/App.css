@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gaegu&display=swap');
 
 .app {
-    font-family: "Roboto Condensed, sans-serif";
-    /*
-    background-image:url('./images/rdr-bg.png');
-    background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center;
-    */
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #090909;
+    color: white;
 }
 
 .blogPreviewBox, .showPreviewBox {

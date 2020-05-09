@@ -3,10 +3,10 @@ import React from 'react';
 // React Bootstrap Components
 import { Navbar } from 'react-bootstrap';
 
-class FooterAudioPlayer extends React.Component{
+class FooterAudioPlayer extends React.Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             data: {},
             isLoading: false

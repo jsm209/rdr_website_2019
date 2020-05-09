@@ -1,0 +1,184 @@
+.home-pg {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.home-pg h1 {
+    font-family: Gaegu, sans-serif;
+    padding: 0;
+    font-size: 30px;
+}
+
+.home-pg p {
+    font-size: 20px;
+}
+
+.home-pg .item {
+    padding-right: 20px;
+    z-index: 1;
+}
+
+p.tag {
+    font-size: smaller;
+    margin: 0;
+    padding: 0;
+    color: gray;
+    font-family: Gaegu, sans-serif;
+    text-align: center;
+}
+
+.header-img {
+    margin-top: 50px;
+    background-image: url("./home-img/desktop-welcome.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    box-shadow: inset 0px 0px 40px 40px #090909;
+}
+
+@media screen and (min-width: 900px) {
+    .header-img {
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+}
+
+/* Blog container styling */
+.blog-container {
+    padding-top: 30px;
+}
+
+.blog-img {
+    width: 20%;
+    height: auto;
+    display: block;
+    position: absolute;
+    float: right;
+    right: 60px;
+    top: 25%;
+    z-index: 0;
+}
+
+.blog-container h1 {
+    padding-top: 0;
+    text-align: left;
+}
+
+.blog-container > a {
+    background-color: black;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.blog-container > a:hover {
+    background-color: #FFF04D;
+    color: black;
+    text-decoration: none;
+    font-style: none;
+}
+
+@media screen and (min-width: 600px) {
+    .blog-container a {
+        width: 30%;
+    }
+}
+
+/* News event styling */
+.news-events {
+    padding: 20px;
+    background-color: #FFF04D;
+    margin-bottom: 10px;
+}
+
+.news-events h1 {
+    color: black;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: medium;
+}
+
+.news-events li {
+    color: black;
+    background-color: #FFF04D;
+    font-size: small;
+}
+
+@media screen and (min-width: 900px) {
+    .news-events {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        padding: 20px;
+        background-color: #FFF04D;
+        width: 20%;
+        margin-bottom: 0;
+    }
+}
+
+/* Modal Styling */
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Roboto Condensed", sans-serif;
+    color: gray;
+    background-color: #090909;
+    border: 1px solid white;
+}
+
+.modal-content a {
+    color: #FFF04D;
+}
+
+.modal-content h1, .modal-header {
+    text-align: center;
+    font-family: Gaegu, sans-serif;
+}
+
+.modal-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-footer a {
+    color: black;
+    background-color: #FFF04D;
+}
+
+.modal-footer button {
+    background-color: black;
+}
+
+/* Poster and Twitch */
+.twitch-poster {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.twitch-poster > div {
+    margin: 10px;
+    width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+    .twitch-poster {
+        flex-direction: row;
+    }
+}
