@@ -3,10 +3,10 @@ import React from 'react';
 // React Bootstrap Components
 import { Navbar } from 'react-bootstrap';
 
-class FooterAudioPlayer extends React.Component{
+class FooterAudioPlayer extends React.Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             data: {},
             isLoading: false
@@ -16,7 +16,7 @@ class FooterAudioPlayer extends React.Component{
     stream = new Audio('http://166.62.119.4:8000/stream');
 
     NavbarStyle = {
-        backgroundColor: "black",
+        backgroundColor: "#333333",
         color: "white"
     };
 
@@ -71,7 +71,7 @@ class FooterAudioPlayer extends React.Component{
         return(
           <div className="fixed-bottom">  
             <Navbar style={this.NavbarStyle}>
-                <p style={pStyle}>{this.state.isLoading ? "Now Playing" : "Stream is temporarily disabled due to COVID-19"}</p>
+                <p style={pStyle}>{this.state.isLoading ? "Now Playing" : "Stream is temporarily offline due to COVID-19. Tune in to our liveshows on Instagram and Twitch @rainydawgradio!"}</p>
             </Navbar>
           </div>
           /*

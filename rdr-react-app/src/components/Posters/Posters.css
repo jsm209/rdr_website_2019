@@ -1,0 +1,36 @@
+.poster {
+    max-width: 200px;
+    margin: 10px;
+    align-self: center;
+    transition: all .2s ease-in-out;
+}
+
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 750px) {
+    .poster {
+        max-width: 150px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .poster {
+        max-width: 200px;
+    }
+}
+
+.poster-popup {
+    width: 50%;
+}
+
+.poster-popup img {
+    max-width: 100%;
+}
+
+.poster:hover {
+    transform: scale(1.1);
+}
