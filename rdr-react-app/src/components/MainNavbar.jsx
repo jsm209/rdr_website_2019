@@ -39,7 +39,8 @@ const MainNavbar = (props) => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                        <Nav.Link><Link to="/" style={style}>Home</Link></Nav.Link>
+                        <Nav.Link><Link to="/" style={style}>BDAY FEST</Link></Nav.Link>
+                        <Nav.Link><Link to="/home" style={style}>Home</Link></Nav.Link>
                         <Nav.Link><Link to="/stream" style={style}>Stream</Link></Nav.Link>
                         <Nav.Link><Link to="/recordings" style={style}>Recordings</Link></Nav.Link>
                         <Nav.Link><Link to="/about" style={style}>About</Link></Nav.Link>
@@ -47,10 +48,10 @@ const MainNavbar = (props) => {
                         <Nav.Link><Link to="/members" style={style}>Current DJs</Link></Nav.Link>
                         <Nav.Link><Link to="/volunteer" style={style}>Get Involved!</Link></Nav.Link>
                         <Nav.Link><Link to="/contact" style={style}>Staff and Contact</Link></Nav.Link>
-                        <Nav.Link style={style} href="https://twitter.com/RainyDawgRadio" target="_blank">Twitter <img src='./images/icon-twitter.png' style={iconStyle}/></Nav.Link>
-                        <Nav.Link style={style} href="https://www.facebook.com/RainyDawgRadio/" target="_blank">Facebook <img src='./images/icon-facebook.png' style={iconStyle}/></Nav.Link>
-                        <Nav.Link style={style} href="https://www.instagram.com/rainydawgradio/" target="_blank">Instagram <img src='./images/icon-instagram.png' style={iconStyle}/></Nav.Link>
-                        <Nav.Link style={style} href="https://open.spotify.com/user/duw2cz3q0rhhodijwwd5r5mc1" target="_blank">Spotify <img src='./images/icon-spotify.png' style={iconStyle}/></Nav.Link>
+                        <Nav.Link style={style} href="https://twitter.com/RainyDawgRadio" target="_blank"><img src='./images/icon-twitter.png' style={iconStyle}/></Nav.Link>
+                        <Nav.Link style={style} href="https://www.facebook.com/RainyDawgRadio/" target="_blank"><img src='./images/icon-facebook.png' style={iconStyle}/></Nav.Link>
+                        <Nav.Link style={style} href="https://www.instagram.com/rainydawgradio/" target="_blank"><img src='./images/icon-instagram.png' style={iconStyle}/></Nav.Link>
+                        <Nav.Link style={style} href="https://open.spotify.com/user/duw2cz3q0rhhodijwwd5r5mc1" target="_blank"><img src='./images/icon-spotify.png' style={iconStyle}/></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
             </Navbar>

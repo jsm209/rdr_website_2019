@@ -30,6 +30,7 @@ import ContactScreen from "./pages/staff-contact/ContactScreen";
 import HomeScreen from "./pages/home/HomeScreen";
 import StreamScreen from "./pages/stream/StreamScreen";
 import RecordingsScreen from "./pages/recordings/RecordingsScreen";
+import BirthdayFestScreen from "./pages/birthdayfest/BirthdayFestScreen";
 
 function App() {
 
@@ -43,6 +44,9 @@ function App() {
           {/* Put content for each page between route tags below. */}
           <Switch>
             <Route exact path="/">
+              <BirthdayFestScreen />
+            </Route>
+            <Route exact path="/home">
               <HomeScreen />
             </Route>
             <Route path="/members">

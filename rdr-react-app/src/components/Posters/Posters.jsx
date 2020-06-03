@@ -3,10 +3,14 @@ import './Posters.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 const posterLocation = [
-	"./images/poster/emeraldnoise.png",
-	"./images/poster/spring2020episode1.png",
-	"./images/poster/spring2020episode2.jpg",
-	"./images/poster/spring2020episode5.png"
+    "./images/poster/bdayfest2020.jpg",
+    "./images/poster/spring2020episode8.jpg",
+    "./images/poster/spring2020episode7.jpg",
+    "./images/poster/emeraldnoise.png",
+    "./images/poster/spring2020episode6.jpg",
+    "./images/poster/spring2020episode5.png",
+    "./images/poster/spring2020episode2.jpg",
+    "./images/poster/spring2020episode1.png"
 ]
 
 const width = [-10, -20, 0, 3];
