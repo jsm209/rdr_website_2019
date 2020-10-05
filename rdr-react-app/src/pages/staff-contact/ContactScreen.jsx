@@ -79,7 +79,7 @@ class ContactScreen extends React.Component {
                         </CardBody>
                         <img width="100%" src="./images/staff-md.jpg" alt="Card image cap" />
                         <CardBody>
-                            <CardText>The preTencious music guy with the opinions. Books shows and curates our rotation!</CardText>
+                            <CardText>The pretencious music guy with the opinions. Books shows and curates our rotation!</CardText>
                             <CardText>Contact for bookings, music submissions, and music library inquiries.</CardText>
                             <CardText>Email: asuwrdmd@uw.edu</CardText>
                         </CardBody>

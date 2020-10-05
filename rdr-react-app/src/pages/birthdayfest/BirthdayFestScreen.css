@@ -5,3 +5,16 @@ iframe {
     height: 540px;
     margin-top: 100px;
 }
+
+h1 {
+    padding-top: 100px;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+}
+
+a {
+    color: yellow;
+}

@@ -44,9 +44,6 @@ function App() {
           {/* Put content for each page between route tags below. */}
           <Switch>
             <Route exact path="/">
-              <BirthdayFestScreen />
-            </Route>
-            <Route exact path="/home">
               <HomeScreen />
             </Route>
             <Route path="/members">

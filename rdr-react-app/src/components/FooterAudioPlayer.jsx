@@ -71,8 +71,7 @@ class FooterAudioPlayer extends React.Component {
         return(
           <div className="fixed-bottom">  
             <Navbar style={this.NavbarStyle}>
-                <p style={pStyle}><a href="https://youtu.be/kWqIzg35Uq0" style={{color: "yellow"}} target="_blank">CLICK HERE</a> to tune into Rainy Dawg Radio's 19th Birthday Show @6-730PM PST!</p>
-                {/*<p style={pStyle}>{this.state.isLoading ? "Now Playing" : "Tune into Rainy Dawg Radio's 19th Birthday Show @6-730PM PST!"}</p>*/}
+                <p style={pStyle}>{this.state.isLoading ? "Now Playing" : "Radio stream is temporarily disabled :( tune in instead to our livestreams and blog articles!"}</p>
             </Navbar>
           </div>
           /*
