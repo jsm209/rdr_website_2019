@@ -14,7 +14,7 @@
     "react-hot-loader": "^4.12.21",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.2.0",
+    "react-scripts": "5.0.1",
     "react-twitch-embed": "^1.2.3",
     "react-twitter-widgets": "^1.7.1",
     "reactstrap": "^8.4.1"
